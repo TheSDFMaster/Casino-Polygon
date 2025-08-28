@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(/casino/images/casino.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#title {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    height: 25%;
+    margin-top: 15%;
+}
+
+#title h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
+#polygon_logo {
+    height: 100px;
+    width: auto;
+}
