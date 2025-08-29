@@ -1,12 +1,14 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url(/images/motif.png);
+    background-image: url(images/motif.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 ul {
@@ -17,6 +19,7 @@ ul {
     background-color: #000000;
     width: 100%;
     align-items: center;
+    box-shadow: 10px 10px 20px black;
 }
 
 li {
@@ -44,7 +47,7 @@ li ul.dropdown-content {
     top: 100%;
     left: 0;
     background-color: #1f1d1d;
-    min-width: 160px;
+    width: auto;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -85,7 +88,6 @@ li ul.dropdown-content li a:hover {
     position: absolute;
     z-index: -100;
     background: white;
-    border-radius: 25px;
     box-shadow: 10px 10px 20px black;
 }
 
@@ -108,7 +110,7 @@ li.dropdown .menu-item {
 .polygon_moving_logo {
     width: 35px;
     height: auto;
-    animation: rotate 10s linear infinite, randomMove 8s linear infinite alternate;
+    animation: rotate 10s linear infinite, randomMove 7s linear infinite alternate;
 }
 
 @keyframes rotate {
@@ -117,38 +119,181 @@ li.dropdown .menu-item {
 }
 
 @keyframes randomMove {
-    0%   { transform: translateX(100px); }
-    20%  { transform: translateX(250px); }
-    40%  { transform: translateX(600px); }
-    60%  { transform: translateX(400px); }
-    80%  { transform: translateX(700px); }
-    100% { transform: translateX(200px); }
+    0%   { transform: translateX(-200px); }
+    20%  { transform: translateX(-400px); }
+    40%  { transform: translateX(300px); }
+    60%  { transform: translateX(0px); }
+    80%  { transform: translateX(200px); }
+    100% { transform: translateX(100px); }
 }
 
 #deux {
     width: 35px;
     height: auto;
-    animation: rotate 12s linear infinite, randomMove2 10s linear infinite alternate;
+    animation: rotate 12s linear infinite, randomMove2 7s linear infinite alternate;
 }
 
 #trois {
     width: 35px;
     height: auto;
-    animation: rotate 12s linear infinite, randomMove3 10s linear infinite alternate;
+    animation: rotate 12s linear infinite, randomMove3 7s linear infinite alternate;
 }
 
 @keyframes randomMove2 {
-    0%   { transform: translateX(1100px); }
-    25%  { transform: translateX(900px); }
-    50%  { transform: translateX(300px); }
-    75%  { transform: translateX(600px); }
-    100% { transform: translateX(1200px); }
+    0%   { transform: translateX(300px); }
+    25%  { transform: translateX(-400px); }
+    50%  { transform: translateX(200px); }
+    75%  { transform: translateX(0px); }
+    100% { transform: translateX(-400px); }
 }
 
 @keyframes randomMove3 {
-    0%   { transform: translateX(100px); }
-    25%  { transform: translateX(1100px); }
-    50%  { transform: translateX(550px); }
-    75%  { transform: translateX(780px); }
-    100% { transform: translateX(100px); }
+    0%   { transform: translateX(0px); }
+    25%  { transform: translateX(300px); }
+    50%  { transform: translateX(-400px); }
+    75%  { transform: translateX(0px); }
+    100% { transform: translateX(300px); }
+}
+
+#money {
+    position: absolute;
+    z-index: 1000;
+    top:20%;
+    left: 6%;
+}
+
+.standard_btn {
+    background: rgb(0, 0, 0);
+    color: #858585;
+    padding: 0px 20px;
+    width: auto;
+    box-shadow: 10px 10px 20px black;
+    cursor: pointer;
+}
+
+.standard_btn:hover {
+    color: white;
+    border: 3px solid rgb(129, 4, 4);
+}
+
+#bank_balance {
+    color: rgb(215, 166, 75);
+}
+
+#authPopUp {
+    position: absolute;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: none;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px 10px;
+}
+
+#blur {
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1500;
+    background: #333;
+    filter: blur(100px);
+    display: none;
+}
+
+.form {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 25px 30px;
+    border-radius: 12px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.7), 0 0 8px white;
+    width: 300px;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.8s ease-out;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+.form h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: rgb(180, 20, 20);
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgb(180, 20, 20);
+}
+
+.form input, 
+.form select, 
+.form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px -13px;
+    border: none;
+    border-radius: 8px;
+    background: #1f1d1d;
+    color: #ddd;
+    font-size: 1rem;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.form input:focus, 
+.form select:focus, 
+.form textarea:focus {
+    outline: none;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    background: #2a2a2a;
+}
+
+.form button {
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    margin-bottom: 4vh;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+    transition: all 0.3s ease-in-out;
+}
+
+.form button:hover {
+    background: rgba(173, 34, 34, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgb(180, 20, 20);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.oauth-logo {
+    width: 1.2vw;
+}
+
+#exit {
+    color: rgb(180, 20, 20);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3000;
+    background: rgba(180, 20, 20, 0);
+    border: 2px solid black;
+    top: 4px;
+    right: 4px;
+}
+
+#exit:hover {
+    box-shadow: 0 0 20px rgb(180, 20, 20);
+    transition: all 0.3s ease-in-out;
 }

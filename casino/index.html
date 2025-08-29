@@ -5,32 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino Polygon</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-   <ul>
+    <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li class="dropdown">
             <div class="menu-item">
                 <a href="#">Games</a>
-                <img class="polygon_moving_logo" src="/images/polygon_logo.png">
-                <img id="deux" src="/images/polygon_logo.png">
-                <img id="trois" src="/images/polygon_logo.png">
+                <li style="margin-right: auto;"><a href="#">Leaderboard</a></li>
+                <img class="polygon_moving_logo" src="images/polygon_logo.png">
+                <img id="deux" src="images/polygon_logo.png">
+                <img id="trois" src="images/polygon_logo.png">
             </div>
-            <ul class="dropdown-content">
-                <li><a href="#">Slots</a></li>
-                <li><a href="#">Poker</a></li>
-                <li><a href="#">Blackjack</a></li>
-            </ul>
+            
         </li>
-        <li class="right"><a href="#">Sign in</a></li>
-        <li class="right2"><a href="#">Sign up</a></li>
+        <li class="right" id="signin"><a href="#">Sign in</a></li>
+        <li class="right2" id="signup" onclick="authentificationPopUp(false)" ><a href="#">Sign up</a></li>
     </ul>
 
+    <div id="money">
+        <button class="standard_btn" ><h2>Current bank balance: </h2><h2 id="bank_balance">100$</h2></button>
+    </div>
+    <div id="authPopUp">
+        <form class="form" id="signUPFrm">
+            <h1 id="SignUp">Sign Up</h1>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" autocomplete="email"><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" autocomplete="new-password"><br>
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" autocomplete="username"><br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <form class="form" id="otherSignUPOptionForm">
+            <h2>Or sign up with</h2>
+            <div class="oauth-buttons">
+                <button style="margin-bottom: 2vh;" type="button" class="oauth-btn google-btn">
+                    <img src="images/google_logo.png" class="oauth-logo">
+                    Google
+                </button>
+                <button style="margin-left: 1vw;" type="button" class="oauth-btn github-btn">
+                    <img src="images/github_logo.png" class="oauth-logo">
+                    GitHub
+                </button>
+            </div>
+        </form>
+        <button id="exit">X</button>
+    </div>
     <div id="title">
         <div id="white"></div>
         <h1>Casino</h1>
-        <img id="polygon_logo" src="/images/polygon.png">
+        <img id="polygon_logo" src="images/polygon.png">
+    </div>
+    <div id="blur">
     </div>
     <script type="module" src="app.js"></script>
 </body>
