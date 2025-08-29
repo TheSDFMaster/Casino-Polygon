@@ -1,29 +1,130 @@
 body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
+    height: 100vh;
     background-image: url(/casino/images/casino.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #1f1d1d;
+    width: 100%;
+    align-items: center;
+}
+
+li {
+    position: relative;
+}
+
+li a {
+    display: block;
+    padding: 16px 18px;
+    color: #858585;
+    text-align: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px black;
+}
+
+li a:hover, .active {
+    color: white;
+    border-bottom: 3px solid rgb(129, 4, 4);
+}
+
+li ul.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1d1d;
+    min-width: 160px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+}
+
+li:hover > ul.dropdown-content {
+    display: block;
+}
+
+li ul.dropdown-content li a {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+li ul.dropdown-content li a:hover {
+    color: white;
+    border-bottom: 3px solid rgb(129, 4, 4);
+    background-color: #333;
 }
 
 #title {
-    align-items: center;
     display: flex;
-    gap: 6px;
+    align-items: center;
     justify-content: center;
-    height: 25%;
-    margin-top: 15%;
+    gap: 6px;
+    flex: 1;
 }
 
 #title h1 {
     margin: 0;
     font-size: 4rem;
+    text-shadow: 2px 2px 5px black;
 }
 
 #polygon_logo {
     height: 100px;
     width: auto;
+}
+
+li.dropdown .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.polygon_moving_logo {
+    width: 35px;
+    height: auto;
+    animation: rotate 10s linear infinite, translate 5s linear infinite alternate;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes translate {
+    from { transform: translateX(200px); }
+    to { transform: translateX(750px); }
+}
+
+#deux {
+    width: 35px;
+    height: auto;
+    animation: rotate 10s linear infinite, translate2 5s linear infinite alternate;
+}
+
+@keyframes translate2 {
+    from { transform: translateX(1300px); }
+    to { transform: translateX(750px); }
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.right {
+    margin-left: auto; 
 }
