@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url(/casino/images/casino.jpg);
+    background-image: url(/images/motif.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,7 +14,7 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: #1f1d1d;
+    background-color: #000000;
     width: 100%;
     align-items: center;
 }
@@ -80,6 +80,15 @@ li ul.dropdown-content li a:hover {
     text-shadow: 2px 2px 5px black;
 }
 
+#white {
+    padding: 40px 250px;
+    position: absolute;
+    z-index: -100;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px black;
+}
+
 #polygon_logo {
     height: 100px;
     width: auto;
@@ -92,10 +101,14 @@ li.dropdown .menu-item {
     position: relative;
 }
 
+.right {
+    margin-left: auto;
+}
+
 .polygon_moving_logo {
     width: 35px;
     height: auto;
-    animation: rotate 10s linear infinite, translate 5s linear infinite alternate;
+    animation: rotate 10s linear infinite, randomMove 8s linear infinite alternate;
 }
 
 @keyframes rotate {
@@ -103,28 +116,39 @@ li.dropdown .menu-item {
     to { transform: rotate(360deg); }
 }
 
-@keyframes translate {
-    from { transform: translateX(200px); }
-    to { transform: translateX(750px); }
+@keyframes randomMove {
+    0%   { transform: translateX(100px); }
+    20%  { transform: translateX(250px); }
+    40%  { transform: translateX(600px); }
+    60%  { transform: translateX(400px); }
+    80%  { transform: translateX(700px); }
+    100% { transform: translateX(200px); }
 }
 
 #deux {
     width: 35px;
     height: auto;
-    animation: rotate 10s linear infinite, translate2 5s linear infinite alternate;
+    animation: rotate 12s linear infinite, randomMove2 10s linear infinite alternate;
 }
 
-@keyframes translate2 {
-    from { transform: translateX(1300px); }
-    to { transform: translateX(750px); }
+#trois {
+    width: 35px;
+    height: auto;
+    animation: rotate 12s linear infinite, randomMove3 10s linear infinite alternate;
 }
 
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+@keyframes randomMove2 {
+    0%   { transform: translateX(1100px); }
+    25%  { transform: translateX(900px); }
+    50%  { transform: translateX(300px); }
+    75%  { transform: translateX(600px); }
+    100% { transform: translateX(1200px); }
 }
 
-.right {
-    margin-left: auto; 
+@keyframes randomMove3 {
+    0%   { transform: translateX(100px); }
+    25%  { transform: translateX(1100px); }
+    50%  { transform: translateX(550px); }
+    75%  { transform: translateX(780px); }
+    100% { transform: translateX(100px); }
 }
