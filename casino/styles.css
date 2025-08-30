@@ -11,6 +11,8 @@ body {
     justify-content: center;
 }
 
+/*index.html*/
+
 ul {
     list-style: none;
     margin: 0;
@@ -104,13 +106,14 @@ li.dropdown .menu-item {
 }
 
 .right {
-    margin-left: auto;
+    visibility: visible;
 }
 
 .polygon_moving_logo {
     width: 35px;
     height: auto;
     animation: rotate 10s linear infinite, randomMove 7s linear infinite alternate;
+    visibility: visible;
 }
 
 @keyframes rotate {
@@ -131,12 +134,14 @@ li.dropdown .menu-item {
     width: 35px;
     height: auto;
     animation: rotate 12s linear infinite, randomMove2 7s linear infinite alternate;
+    visibility: visible;
 }
 
 #trois {
     width: 35px;
     height: auto;
     animation: rotate 12s linear infinite, randomMove3 7s linear infinite alternate;
+    visibility: visible;
 }
 
 @keyframes randomMove2 {
@@ -279,7 +284,7 @@ li.dropdown .menu-item {
     width: 1.2vw;
 }
 
-#exit {
+#exit, #exit2 {
     color: rgb(180, 20, 20);
     font-weight: bold;
     font-size: 1.5rem;
@@ -293,7 +298,62 @@ li.dropdown .menu-item {
     right: 4px;
 }
 
-#exit:hover {
+#exit:hover, #exit2:hover {
     box-shadow: 0 0 20px rgb(180, 20, 20);
     transition: all 0.3s ease-in-out;
 }
+
+.warnings {
+    color: red;
+    display: none;
+}
+
+#logout_btn {
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    margin-right: 1vw;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#logout_btn:hover {
+    background: rgba(173, 34, 34, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgb(180, 20, 20);
+}
+
+#signInAs {
+    color: white;
+    margin-right: 1.5vw;
+}
+
+#wrapper {
+    position: absolute;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 84vw;
+    visibility: hidden;
+}
+
+#loginPopUp {
+    position: absolute;
+    z-index: 6000;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: none;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px 10px;
+}
+
+/*games.html*/
+
