@@ -8,7 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
 }
 
 /*index.html*/
@@ -356,4 +357,63 @@ li.dropdown .menu-item {
 }
 
 /*games.html*/
+
+.games {
+    background-image: url(images/tapis.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid black;
+    min-height: 30%;
+    margin: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1 1 300px;      
+    max-width: 400px; 
+}
+
+.games h2 {
+    position: absolute;
+    z-index: 3;
+    margin-right: 70%;
+    color: black;
+    text-shadow: 2px 2px 5px green;
+}
+
+#roulette {
+    width: 50%;
+}
+
+.enterGame {
+    position: absolute;
+    bottom: 2%;
+    width: 98%;
+    z-index: 4;
+    padding: 10px 20px;
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+    transition: all 0.3s ease-in-out;
+}
+
+.enterGame:hover {
+    background: rgba(173, 34, 34, 0.663);
+    transform: translateX(6px);
+    box-shadow: 0 0 20px rgb(180, 20, 20);
+}
+
+#gamesDiv {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;  
+    gap: 10px;              
+    flex-wrap: wrap;          
+    margin-top: 4vh;
+}
 

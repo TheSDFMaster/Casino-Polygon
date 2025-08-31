@@ -9,27 +9,23 @@
 </head>
 <body>
     <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li class="dropdown">
             <div class="menu-item">
-                <a href="#">Games</a>
+                <a class="active" href="games.html">Games</a>
                 <li style="margin-right: auto;"><a href="#">Leaderboard</a></li>
                 <img class="polygon_moving_logo" src="images/polygon_logo.png">
                 <img id="deux" src="images/polygon_logo.png">
                 <img id="trois" src="images/polygon_logo.png">
             </div> 
         </li>
-        <li class="right" style="margin-left: auto;" id="signin"><a href="#">Login</a></li>
-        <li class="right" id="signup"><a href="#">Sign up</a></li>
+        <li class="right" style="margin-left: auto;" id="signin"><a>Login</a></li>
+        <li class="right" id="signup"><a >Sign up</a></li>
         <div id="wrapper">
             <p id="signInAs">Loading Username...</p>
             <div class="sign"><button id="logout_btn">Logout</button></div>
         </div>
     </ul>
-
-    <div id="money">
-        <button class="standard_btn" ><h2>Current bank balance: </h2><h2 id="bank_balance">100 000 000$</h2></button>
-    </div>
     <div id="authPopUp">
         <form class="form" id="signUPFrm">
             <h1 id="SignUp">Sign Up</h1>
@@ -83,12 +79,40 @@
         </form>
         <button id="exit2">X</button>
     </div>
-    <div id="title">
-        <div id="white"></div>
-        <h1>Casino</h1>
-        <img id="polygon_logo" src="images/polygon.png">
     </div>
     <div id="blur">
+    </div>
+    <div id="gamesDiv">
+        <div class="games" id="roulette">
+            <h2 >Roulette</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Roulette > </button>
+        </div>
+        <div class="games" id="slots">
+            <h2 >Slots</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Slots > </button>
+        </div>
+        <div class="games" id="blackjack">
+            <h2 >Blackjack</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+        </div>
+        <div class="games" id="blackjack">
+            <h2 >Blackjack</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+        </div>
+        <div class="games" id="blackjack">
+            <h2 >Blackjack</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+        </div>
+        <div class="games" id="blackjack">
+            <h2 >Blackjack</h2>
+                <img id="roulette" src="images/roulette.png">
+                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+        </div>
     </div>
     <script type="module" src="app.js"></script>
 </body>
