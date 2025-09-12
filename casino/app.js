@@ -153,3 +153,13 @@ onAuthStateChanged(auth, async (user) => {
     });
   }
 });
+
+if (window.innerWidth < 780) {
+  console.log(window.innerWidth);
+  document.getElementById('title2').style.fontSize = '2.7rem';
+  document.getElementById('polygon_logo').style.width = '40vw'
+  const money = document.getElementById('money');
+  money.style.width = '50%';
+  document.getElementById('money2').style.fontSize = '0.8rem';
+  document.getElementById('bank_balance').style.fontSize = '0.9rem';
+}

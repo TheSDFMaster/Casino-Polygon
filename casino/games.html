@@ -14,9 +14,6 @@
             <div class="menu-item">
                 <a class="active" href="games.html">Games</a>
                 <li style="margin-right: auto;"><a href="#">Leaderboard</a></li>
-                <img class="polygon_moving_logo" src="images/polygon_logo.png">
-                <img id="deux" src="images/polygon_logo.png">
-                <img id="trois" src="images/polygon_logo.png">
             </div> 
         </li>
         <li class="right" style="margin-left: auto;" id="signin"><a>Login</a></li>
@@ -83,6 +80,10 @@
     <div id="blur">
     </div>
     <div id="gamesDiv">
+        <div class="games" id="blackjack">
+            <h2 >Blackjack</h2>
+            <button class="enterGame" id="enterBlackjack" onclick="window.location.href = 'blackjack.html'">Play Blackjack > </button>
+        </div>
         <div class="games" id="roulette">
             <h2 >Roulette</h2>
                 <img id="roulette" src="images/roulette.png">
@@ -91,29 +92,20 @@
         <div class="games" id="slots">
             <h2 >Slots</h2>
                 <img id="roulette" src="images/roulette.png">
-                <button class="enterGame" id="enterRoulette">Play Slots > </button>
+                <button class="enterGame" id="enterSlots">Play Slots > </button>
         </div>
-        <div class="games" id="blackjack">
-            <h2 >Blackjack</h2>
+        <div class="games" id="RTB">
+            <h2 >Ride The Bus</h2>
                 <img id="roulette" src="images/roulette.png">
-                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+                <button class="enterGame" id="enterRTB">Play Ride The Bus > </button>
         </div>
-        <div class="games" id="blackjack">
-            <h2 >Blackjack</h2>
+        <div class="games" id="Craps">
+            <h2 >Craps</h2>
                 <img id="roulette" src="images/roulette.png">
-                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
-        </div>
-        <div class="games" id="blackjack">
-            <h2 >Blackjack</h2>
-                <img id="roulette" src="images/roulette.png">
-                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
-        </div>
-        <div class="games" id="blackjack">
-            <h2 >Blackjack</h2>
-                <img id="roulette" src="images/roulette.png">
-                <button class="enterGame" id="enterRoulette">Play Blackjack > </button>
+                <button class="enterGame" id="enterCraps">Play Craps > </button>
         </div>
     </div>
     <script type="module" src="app.js"></script>
+    <script src="pleaserotate.js"></script>
 </body>
 </html>

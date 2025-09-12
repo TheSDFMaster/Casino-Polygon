@@ -1,10 +1,9 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url(images/motif.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    font-family:Inter, ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;
+    background:linear-gradient(180deg,#071021 0%,#0b1020 100%);
+    color:#e6eef8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,21 +81,13 @@ li ul.dropdown-content li a:hover {
 
 #title h1 {
     margin: 0;
-    font-size: 4rem;
+    font-size: 3.5vw;
     text-shadow: 2px 2px 5px black;
 }
 
-#white {
-    padding: 40px 250px;
-    position: absolute;
-    z-index: -100;
-    background: white;
-    box-shadow: 10px 10px 20px black;
-}
-
 #polygon_logo {
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 18vw;
 }
 
 li.dropdown .menu-item {
@@ -108,57 +99,6 @@ li.dropdown .menu-item {
 
 .right {
     visibility: visible;
-}
-
-.polygon_moving_logo {
-    width: 35px;
-    height: auto;
-    animation: rotate 10s linear infinite, randomMove 7s linear infinite alternate;
-    visibility: visible;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes randomMove {
-    0%   { transform: translateX(-200px); }
-    20%  { transform: translateX(-400px); }
-    40%  { transform: translateX(300px); }
-    60%  { transform: translateX(0px); }
-    80%  { transform: translateX(200px); }
-    100% { transform: translateX(100px); }
-}
-
-#deux {
-    width: 35px;
-    height: auto;
-    animation: rotate 12s linear infinite, randomMove2 7s linear infinite alternate;
-    visibility: visible;
-}
-
-#trois {
-    width: 35px;
-    height: auto;
-    animation: rotate 12s linear infinite, randomMove3 7s linear infinite alternate;
-    visibility: visible;
-}
-
-@keyframes randomMove2 {
-    0%   { transform: translateX(300px); }
-    25%  { transform: translateX(-400px); }
-    50%  { transform: translateX(200px); }
-    75%  { transform: translateX(0px); }
-    100% { transform: translateX(-400px); }
-}
-
-@keyframes randomMove3 {
-    0%   { transform: translateX(0px); }
-    25%  { transform: translateX(300px); }
-    50%  { transform: translateX(-400px); }
-    75%  { transform: translateX(0px); }
-    100% { transform: translateX(300px); }
 }
 
 #money {
@@ -356,6 +296,10 @@ li.dropdown .menu-item {
     padding: 20px 10px;
 }
 
+#about {
+    margin-left: 95vw;
+}
+
 /*games.html*/
 
 .games {
@@ -379,7 +323,7 @@ li.dropdown .menu-item {
     z-index: 3;
     margin-right: 70%;
     color: black;
-    text-shadow: 2px 2px 5px green;
+    text-shadow: 2px 2px 5px #111d32;
 }
 
 #roulette {
@@ -414,6 +358,42 @@ li.dropdown .menu-item {
     align-items: flex-start;  
     gap: 10px;              
     flex-wrap: wrap;          
-    margin-top: 4vh;
+    margin-top: 1.5vh;
+    height: 100%;
 }
 
+#RTB h2{
+    margin-left: 15px;
+}
+
+/*blackjack.html*/
+
+#blackjackContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#exitBlackjack {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3000;
+    background-color: #580202;
+    border: 2px solid black;
+    right: 0px;
+}
+
+#exitBlackjack:hover {
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 0, 0, 0.523);
+}
+
+#table {
+    width: 65vw;
+}
