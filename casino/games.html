@@ -6,6 +6,8 @@
     <title>Casino Polygon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7629016840824378"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <ul>
@@ -16,14 +18,17 @@
                 <li style="margin-right: auto;"><a href="#">Leaderboard</a></li>
             </div> 
         </li>
-        <li class="right" style="margin-left: auto;" id="signin"><a>Login</a></li>
+        <li class="right" id="LOS"><a href="LOS.html">Logged Out Session</a></li>
+        <li class="right" id="signin"><a>Login</a></li>
         <li class="right" id="signup"><a >Sign up</a></li>
         <div id="wrapper">
             <p id="signInAs">Loading Username...</p>
             <div class="sign"><button id="logout_btn">Logout</button></div>
         </div>
     </ul>
-    <div id="authPopUp">
+    
+    <div id="blur">
+        <div id="authPopUp">
         <form class="form" id="signUPFrm">
             <h1 id="SignUp">Sign Up</h1>
             <label for="email">Email</label><br>
@@ -77,31 +82,28 @@
         <button id="exit2">X</button>
     </div>
     </div>
-    <div id="blur">
     </div>
     <div id="gamesDiv">
         <div class="games" id="blackjack">
             <h2 >Blackjack</h2>
+            <img id="blackjackImg" src="images/Polygon2.png">
             <button class="enterGame" id="enterBlackjack" onclick="window.location.href = 'blackjack.html'">Play Blackjack > </button>
         </div>
         <div class="games" id="roulette">
             <h2 >Roulette</h2>
-                <img id="roulette" src="images/roulette.png">
+                <img id="rouletteImg" src="images/roulette.png">
                 <button class="enterGame" id="enterRoulette">Play Roulette > </button>
         </div>
         <div class="games" id="slots">
             <h2 >Slots</h2>
-                <img id="roulette" src="images/roulette.png">
                 <button class="enterGame" id="enterSlots">Play Slots > </button>
         </div>
         <div class="games" id="RTB">
             <h2 >Ride The Bus</h2>
-                <img id="roulette" src="images/roulette.png">
                 <button class="enterGame" id="enterRTB">Play Ride The Bus > </button>
         </div>
         <div class="games" id="Craps">
             <h2 >Craps</h2>
-                <img id="roulette" src="images/roulette.png">
                 <button class="enterGame" id="enterCraps">Play Craps > </button>
         </div>
     </div>

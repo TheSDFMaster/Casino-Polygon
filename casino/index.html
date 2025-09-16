@@ -6,6 +6,8 @@
     <title>Casino Polygon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7629016840824378"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <ul>
@@ -16,7 +18,8 @@
                 <li style="margin-right: auto;"><a href="404.html">Leaderboard</a></li>
             </div> 
         </li>
-        <li class="right" style="margin-left: auto;" id="signin"><a href="#">Login</a></li>
+        <li class="right" id="LOS"><a href="LOS.html">Logged Out Session</a></li>
+        <li class="right" id="signin"><a href="#">Login</a></li>
         <li class="right" id="signup"><a href="#">Sign up</a></li>
         <div id="wrapper">
             <p id="signInAs">Loading Username...</p>
@@ -27,7 +30,13 @@
     <div id="money">
         <button class="standard_btn" ><h2 id="money2">Current bank balance: </h2><h2 id="bank_balance">100 000 000$</h2></button>
     </div>
-    <div id="authPopUp">
+
+    <div id="title">
+        <h1 id="title2">Casino</h1>
+        <img id="polygon_logo" src="images/polygon1.png">
+    </div>
+    <div id="blur">
+            <div id="authPopUp">
         <form class="form" id="signUPFrm">
             <h1 id="SignUp">Sign Up</h1>
             <label for="email">Email</label><br>
@@ -80,13 +89,8 @@
         </form>
         <button id="exit2">X</button>
     </div>
-    <div id="title">
-        <h1 id="title2">Casino</h1>
-        <img id="polygon_logo" src="images/polygon1.png">
-    </div>
-    <div id="blur">
     </div>
     <script type="module" src="app.js"></script>
-    <script src="pleaserotate.js"></script>
+    <script src="LOS.js"></script>
 </body>
 </html>

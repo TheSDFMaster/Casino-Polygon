@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.O. Session</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7629016840824378"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <button onclick="history.back()" id="exitBlackjack">EXIT</button>
+    <div id="losContainer">
+        <form class="form" id="losForm">
+            <h1 id="losH1">Logged Out Session</h1>
+            <hr>
+            <label>If you already have a L.O.S., enter your L.O.S. username and your session will be recovered by local storage.</label>
+            <hr>
+            <label>If you don't have a L.O.S. by entering down an username, you will create one.</label>
+            <hr>
+            <br>
+            <label for="losUsername">Username</label><br>
+            <input type="text" id="losUsername" name="losUsername" autocomplete="username"><br>
+            <button type="submit">Enter L.O. Session</button>
+        </form>
+    </div>
+    <label style="margin-bottom: 2%;">L.O.S. = Logged out session</label>
+    <script src="LOS.js"></script>
+</body>
+</html>

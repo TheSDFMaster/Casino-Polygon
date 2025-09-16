@@ -32,8 +32,8 @@ const popUp2 = document.getElementById('loginPopUp');
 const blur = document.getElementById('blur');
 let popupOpen = false;
 
-document.getElementById('signup').addEventListener('click', () => { popupOpen = true; popUp.style.display = "flex"; blur.style.display = "block"; });
-document.getElementById('signin').addEventListener('click', () => { popupOpen = true; popUp2.style.display = "flex"; blur.style.display = "block"; });
+document.getElementById('signup').addEventListener('click', () => { popupOpen = true; popUp.style.display = "flex"; blur.style.display = "flex"; });
+document.getElementById('signin').addEventListener('click', () => { popupOpen = true; popUp2.style.display = "flex"; blur.style.display = "flex"; });
 
 function closePopup() {
   popupOpen = false;
@@ -159,7 +159,5 @@ if (window.innerWidth < 780) {
   document.getElementById('title2').style.fontSize = '2.7rem';
   document.getElementById('polygon_logo').style.width = '40vw'
   const money = document.getElementById('money');
-  money.style.width = '50%';
-  document.getElementById('money2').style.fontSize = '0.8rem';
-  document.getElementById('bank_balance').style.fontSize = '0.9rem';
+
 }
